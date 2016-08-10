@@ -1,0 +1,10 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: hariinigajian_dev
+  pool: 5
+  username: root
+  password:
+  host: localhost
+  port: 3306

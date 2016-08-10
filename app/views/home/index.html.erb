@@ -1,0 +1,25 @@
+<style type="text/css">
+  form{
+    text-align: center;
+  }
+</style>
+
+<%= button_to 'Fetch Events', fetch_events_path, style: 'margin:20px auto;font-size:36px;', remote: true %>
+<%= button_to 'Clear Events', clear_events_path, style: 'margin:20px auto;font-size:36px;', method: :delete %>
+
+<table border="1" width="100%" style="text-align:center;">
+  <tr>
+    <th>Event ID</th>
+    <th>Name</th>
+    <th width="40%">Description</th>
+    <th>Price</th>
+  </tr>
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.event_id %></td>
+      <td><%= event.name %></td>
+      <td><%= event.description %></td>
+      <td><%= event.price %></td>
+    </tr>
+  <% end %>
+</table>
